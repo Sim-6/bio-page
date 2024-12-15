@@ -17,16 +17,16 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.5px);
     -webkit-backdrop-filter: blur(4.5px);
-    border: 1px solid rgba(255, 255, 255, 0.27);
+    border: 2px solid rgb(255, 255, 255);
 }
 
 button.glass {
     background: rgba(255, 255, 255, 0.22);
-    border-radius: 16px;
+    border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.5px);
     -webkit-backdrop-filter: blur(4.5px);
-    border: 1px solid rgba(255, 255, 255, 0.27);
+    border: 2px solid rgb(255, 255, 255);
     padding: 10px 20px;
     color: white;
     font-size: 16px;
