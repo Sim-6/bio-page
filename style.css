@@ -8,6 +8,13 @@ body {
     background-image: url("img/planet-in-space-side-black-white.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1000px; /* Added perspective */
 }
 
 .glass{
@@ -18,6 +25,31 @@ body {
     backdrop-filter: blur(4.5px);
     -webkit-backdrop-filter: blur(4.5px);
     border: 2px solid rgb(255, 255, 255);
+    transition: transform 0.1s ease;
+    transform-style: preserve-3d; /* Added for 3D effect */
+    position: relative;
+    overflow: hidden;
+}
+
+.glass::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 4s linear infinite; /* Adjusted animation duration and timing function */
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(50%, 50%) rotate(45deg);
+    }
 }
 
 button.glass {
